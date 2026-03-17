@@ -2,7 +2,7 @@
 
 set -e
 
-REPO="git@github.com:Doxe187/dotfiles.git"
+REPO="https://github.com/Doxe187/dotfiles.git"
 CFG_DIR="$HOME/.cfg"
 
 echo "==> Dotfiles Setup"
@@ -105,14 +105,6 @@ case "$OS" in
     ;;
 esac
 
-# ── SSH-Key prüfen ─────────────────────────────────────────
-if ! ssh -T git@github.com 2>&1 | grep -q "successfully authenticated"; then
-  echo "WARNUNG: SSH-Key ist nicht bei GitHub hinterlegt."
-  echo "Füge deinen SSH-Key zuerst unter https://github.com/settings/keys hinzu."
-  echo "Fortfahren trotzdem? (j/n)"
-  read -r answer
-  [[ "$answer" != "j" ]] && exit 1
-fi
 
 # ── Bare Repo klonen ───────────────────────────────────────
 if [ -d "$CFG_DIR" ]; then
