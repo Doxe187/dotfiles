@@ -23,3 +23,8 @@ alias run="npm run dev"
 # alias p='python'
 alias config='/usr/bin/git --git-dir=/home/janis/.cfg/ --work-tree=/home/janis'
 alias config='/usr/bin/git --git-dir=/home/janis/.cfg/ --work-tree=/home/janis'
+
+. "$HOME/.local/share/../bin/env"
+
+eval "$(starship init bash)"
+
