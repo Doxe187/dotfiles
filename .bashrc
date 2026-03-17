@@ -13,15 +13,16 @@ alias ...="cd ../..".
 alias ....="cd ../.."
 alias reload="source .bashrc"
 alias nv="nvim"
-alias ll="ls"
+alias ll="lt"
 alias create_tmux="~/scripts/create_tmux.sh"
 alias tent="tmux a -t"
 alias gb="git branch"
 alias gs="git status"
 alias run="npm run dev"
+alias ac="source venv/bin/activate"
+alias dc="deactivate"
 # Make an alias for invoking commands you use constantly
 # alias p='python'
-alias config='/usr/bin/git --git-dir=/home/janis/.cfg/ --work-tree=/home/janis'
 alias config='/usr/bin/git --git-dir=/home/janis/.cfg/ --work-tree=/home/janis'
 
 . "$HOME/.local/share/../bin/env"
